@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'story_express'
+require 'pivotal-tracker'
+
+PivotalTracker::Client.token = ENV['TRACKER_TOKEN']
+PivotalTracker::Client.use_ssl = true
 
 StoryExpress.deliver
