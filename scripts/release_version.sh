@@ -7,5 +7,5 @@ git tag $1 &&
 git push &&
 git push origin $1 &&
 rm *.gem &&
-gem build story_express.gemspec
+gem build story_express.gemspec &&
 gem push "story_express-$1.gem"
