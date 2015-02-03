@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = StoryExpress::VERSION
   spec.authors       = ["Shelby Doolittle"]
   spec.email         = ["shelby@shelbyd.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Story Express delivers your stories to your PM.}
+  spec.description   = %q{Run story express at the end of your build to automatically deliver all the stories that passed the build.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
