@@ -22,7 +22,7 @@ describe StoryExpress::Rider do
       subject.deliver stories
 
       stories.each do |story|
-        expect(story.notes).to have_received(:create).with(text: 'Delivered by (Story Express)[https://github.com/shelbyd/story_express].')
+        expect(story.notes).to have_received(:create).with(text: 'Delivered by Story Express. (https://github.com/shelbyd/story_express)')
       end
     end
   end
