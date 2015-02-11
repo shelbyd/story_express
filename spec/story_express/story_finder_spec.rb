@@ -9,8 +9,8 @@ describe StoryExpress::StoryFinder do
     it 'returns finished stories that have been marked finished' do
       allow(PivotalTracker::Project).to receive(:find).with(ENV['TRACKER_PROJECT_ID']).and_return(project)
       allow(project.stories).to receive(:all).with(state: 'finished', story_type: ['bug', 'feature']).and_return([finished_marked_story, finished_unmarked_story])
-      allow(StoryExpress::GitReader).to receive(:grep_log).with('finishes #finished_marked_story').and_return('[finishes #finished_marked_story]')
-      allow(StoryExpress::GitReader).to receive(:grep_log).with('finishes #finished_unmarked_story').and_return('')
+      allow(StoryExpress::GitReader).to receive(:grep_log).with('finished_marked_story').and_return('[finishes #finished_marked_story]')
+      allow(StoryExpress::GitReader).to receive(:grep_log).with('finished_unmarked_story').and_return('')
 
       expect(StoryExpress::StoryFinder.deliverables).to eq [finished_marked_story]
     end

@@ -23,12 +23,16 @@ Or install it yourself as:
 
 **Currently only supports tracker projects.**
 
-Story Express delivers stories that are found by grepping git logs for ```finishes #STORY_ID```.
-So, to work with story express, add ```finishes #12345678``` to your commit messages that finish a story.
+Story Express delivers stories that are found by grepping git logs for a story id.
+So, to work with story express, include the story id in your commit message(s) for the commit(s) that finish a given story.
 
 You need your tracker project id and a tracker API key.
 Set the ```TRACKER_PROJECT_ID``` and ```TRACKER_TOKEN``` to your project id and API key respectively.
 Then, running ```story_express``` will deliver all your finished stories.
+
+```
+TRACKER_PROJECT_ID=123456789 TRACKER_TOKEN=0123456789abcdef story_express
+```
 
 ## TODO
 
