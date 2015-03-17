@@ -3,6 +3,9 @@
 require 'story_express'
 require 'pivotal-tracker'
 
+raise 'no TRACKER_PROJECT_ID defined' if ENV['TRACKER_PROJECT_ID'].nil?
+raise 'no TRACKER_TOKEN defined' if ENV['TRACKER_TOKEN'].nil?
+
 PivotalTracker::Client.token = ENV['TRACKER_TOKEN']
 PivotalTracker::Client.use_ssl = true
 
